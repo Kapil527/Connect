@@ -150,12 +150,12 @@ export const cancleAppointment = asyncErrorHandler(
   async (req: Request, res: Response, next: NextFunction) => {
     const doctorId = req.params.id;
     const userId = req.body.user;
-    const { date, startTime, endTime } = req.body;
+    const { date, startTime, endTime, reason } = req.body;
 
     if (!doctorId || !userId) {
       return next(new ErrorHandler(400, "Unauthorized Id or token"));
     }
-    if (!date || !startTime || !endTime) {
+    if (!date || !startTime || !endTime || !reason) {
       return next(new ErrorHandler(400, "Please Enter all the details"));
     }
 
@@ -194,7 +194,7 @@ export const cancleAppointment = asyncErrorHandler(
 
     const appointment = await Appointments.findOneAndUpdate(
       { userId, doctorId, availableHours: appointmentBooking },
-      { $set: { status: "cancled" } },
+      { $set: { status: "cancelled", reason: reason } },
       { new: true }
     );
 

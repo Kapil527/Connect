@@ -4,6 +4,7 @@ import Login from "./auth/login/Login";
 import SignUP from "./auth/signup/Signup";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/signup" element={<SignUP />} />
         <Route path="/" element={<Home />} />
       </Routes>
+      <Footer />
     </>
   );
 }

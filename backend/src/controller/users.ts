@@ -36,7 +36,7 @@ export const signup = asyncErrorHandler(
       return next(
         new ErrorHandler(400, "Username should consists atleast 3 charecter")
       );
-    } else if (username.length > 20) {
+    } else if (username.length > 50) {
       return next(
         new ErrorHandler(
           400,

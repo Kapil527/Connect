@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+connect-47064-firebase-adminsdk-cxgqg-2f96d1b34b.json
 
 # Editor directories and files
 .vscode/*

@@ -3,7 +3,7 @@ import { NavigateFunction, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-import WelcomeText from "../../components/welcomeText";
+import WelcomeText from "../welcomeText";
 import Card from "../../components/Card";
 import PhoneNumber from "./PhoneNumber";
 import OTPVerification from "./OptVerification";

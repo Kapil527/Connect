@@ -12,10 +12,13 @@ const appointmentSchema = new Schema<AppointmentSchemaType>({
   disease: { type: String, require: true },
   status: {
     type: String,
+    enum: ["scheduled", "completed", "cancelled"],
+    require: true,
   },
   date: { type: Date, require: true },
   startTime: { type: Date, require: true },
   endTime: { type: Date, require: true },
+  reason: { type: String }, // Reason to cancle an appointment.
   createdAt: { type: Date, default: Date.now },
 });
 

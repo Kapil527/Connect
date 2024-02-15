@@ -12,5 +12,6 @@ export interface AppointmentSchemaType {
   date: Date;
   startTime: Date;
   endTime: Date;
+  reason: string;
   createdAt: Date;
 }
