@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 
 import WelcomeText from "../welcomeText";
-import Card from "../../components/Card";
+import Card from "../Card";
 import { intionalState, reducer, ActionTypes } from "../Reducer";
 
 export default function Login() {

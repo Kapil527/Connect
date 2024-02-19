@@ -24,7 +24,7 @@ const SecondPart = () => {
                 <h3 className="text-2xl">24/7 Doctors Available</h3>
               </div>
               <p className="ml-12">
-                Access skilled doctors anytime, anywhere – 24/7 availability
+                Access skilled doctors anytime, anywhere &#45; 24/7 availability
                 guaranteed.
               </p>
             </div>

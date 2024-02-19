@@ -1,8 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
+import { checkLoginStatus } from "../components/CheckLoginStatus";
 
 import WelcomeImage2 from "/welcomeImage.jpg";
 
 const WelcomeHome = () => {
+  const navigate = useNavigate();
+
+  const handleOnClick = () => {
+    const isLogin = checkLoginStatus();
+    if (isLogin) {
+      navigate("/appointments");
+    } else {
+      navigate("/login");
+    }
+  };
   return (
     <>
       <div className="welcome h-3/4 flex items-center">
@@ -16,14 +28,14 @@ const WelcomeHome = () => {
             healthcare at your fingertips with Connect.
           </p>
           <div className="buttons mt-8">
-            <Link
-              to="/"
+            <button
               className="p-4 rounded bg-sky-800 text-white mr-4 hover:bg-white hover:text-sky-800 border border-black/50"
+              onClick={handleOnClick}
             >
               Book Appointment
-            </Link>
+            </button>
             <Link
-              to="/"
+              to="/about"
               className="p-4 rounded bg-sky-800 text-white mr-4 hover:bg-white hover:text-sky-800 border border-black/50"
             >
               More About us

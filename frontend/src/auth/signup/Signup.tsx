@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 
 import WelcomeText from "../welcomeText";
-import Card from "../../components/Card";
+import Card from "../Card";
 import PhoneNumber from "./PhoneNumber";
 import OTPVerification from "./OptVerification";
 import UserDetails from "./UserDetails";

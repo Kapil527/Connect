@@ -6,7 +6,7 @@ import {
 } from "firebase/auth";
 import toast from "react-hot-toast";
 
-import { auth } from "../firebaseConfig";
+import { auth } from "../../firebaseConfig.ts";
 
 //send opt to the entered number
 // const [user, setUser] = useState<ConfirmationResult | null>(null);
