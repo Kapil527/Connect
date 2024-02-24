@@ -1,5 +1,6 @@
 import WelcomeHome from "../Home/WelcomeHome";
 import SecondPart from "../Home/SecondPart";
+import ThirdPart from "../Home/ThirdPart";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <div className="container h-full">
           <WelcomeHome />
           <SecondPart />
+          <ThirdPart />
         </div>
       </div>
     </>

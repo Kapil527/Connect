@@ -1,14 +1,14 @@
 import { useReducer } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import WelcomeText from "../welcomeText";
-import Card from "../Card";
 import { intionalState, reducer, ActionTypes } from "../Reducer";
 
 export default function Login() {
   const [state, dispatch] = useReducer(reducer, intionalState);
   const navigate = useNavigate();
+  const location = useLocation()
+  console.log(location.pathname)
 
   //handles login functionality
   const handleonClick = async (event: React.MouseEvent) => {
@@ -47,8 +47,7 @@ export default function Login() {
   return (
     <>
       <div className="container h-screen flex flex-wrap justify-evenly items-center bg-gradient-to-r from-blue-600 to-sky-500 w-screen">
-        <WelcomeText />
-        <Card>
+        <div className="right bg-white h-1/2 w-1/4 p-8 rounded-xl drop-shadow-xl">
           <div className="header flex justify-center">
             <h1 className="text-center bg-gradient-to-r from-blue-600 to-sky-500 inline-block text-transparent bg-clip-text text-2xl font-medium">
               Login
@@ -100,7 +99,7 @@ export default function Login() {
               Login
             </button>
           </form>
-        </Card>
+        </div>
       </div>
     </>
   );
