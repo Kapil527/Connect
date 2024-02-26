@@ -22,7 +22,7 @@ export default function PhoneNumber({
       />
       <div id="recaptcha"></div>
       <button
-        className="bg-sky-500 text-white text-xl text-center w-full p-1 shadow-sky-500"
+        className="py-1.5 px-4 rounded bg-sky-800 text-white mr-4 hover:bg-white hover:text-sky-800 border border-black/50 block mx-auto w-full"
         onClick={() => {
           sendOtp(phoneNumber, onNext);
         }}
@@ -34,7 +34,7 @@ export default function PhoneNumber({
           <>
             <small>
               Alreay Have an account?
-              <Link to="/login" className="text-sky-500">
+              <Link to="/login" className="text-sky-800">
                 Login
               </Link>
             </small>

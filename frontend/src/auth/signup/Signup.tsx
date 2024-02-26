@@ -3,7 +3,6 @@ import { NavigateFunction, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import axios from "axios";
 
-import Card from "../Card";
 import PhoneNumber from "./PhoneNumber";
 import OTPVerification from "./OptVerification";
 import UserDetails from "./UserDetails";
@@ -108,8 +107,8 @@ export default function SignUP() {
   };
 
   return (
-    <div className="container h-screen flex justify-evenly items-center bg-gradient-to-r from-blue-600 to-sky-500 w-100 h-100">
-      <div className="right bg-white h-1/2 w-1/4 p-8 rounded-xl drop-shadow-xl">
+    <div className="container h-screen flex justify-evenly items-center w-100 h-100">
+      <div className="right bg-white h-1/2 w-1/4 p-8 rounded-xl drop-shadow-2xl">
         <div className="header flex items-center">
           {step > 1 && (
             <svg
@@ -128,7 +127,7 @@ export default function SignUP() {
               />
             </svg>
           )}
-          <h1 className="text-center bg-gradient-to-r from-blue-600 to-sky-500 inline-block text-transparent bg-clip-text text-2xl font-medium w-full">
+          <h1 className="text-center text-sky-800 text-2xl font-medium w-full">
             SignUP
           </h1>
         </div>

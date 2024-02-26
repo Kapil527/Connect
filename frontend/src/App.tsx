@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppointmentCard from "./Appointment/AppointmentCard";
+import Setting from "./Settings/Setting";
 
 function App() {
   const currentPath = useLocation();
@@ -23,6 +24,7 @@ function App() {
         <Route path="/signup" element={<SignUP />} />
         <Route path="/" element={<Home />} />
         <Route path="/appointments" element={<AppointmentCard />} />
+        <Route path="/profile" element={<Setting />}/>
       </Routes>
       {currentPath.pathname == "/login" ? (
         ""

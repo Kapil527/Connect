@@ -53,10 +53,10 @@ const Footer = () => {
             </div>
             <div className="follow flex">
                 <h4 className="mr-2">Follow Us On </h4>
-                <img src={InstaIcon} alt="InstaIcon" className="w-4 mr-2" />
-                <img src={FacebookIcon} alt="FacebookIcon" className="w-4 mr-2" />
-                <img src={XIcon} alt="XIcon" className="w-4 mr-2" />
-                <img src={LinkedInIcon} alt="LinkedInIcon" className="w-4 mr-2" />
+                <img src={InstaIcon} alt="InstaIcon" className="w-4 mr-2 cursor-pointer" />
+                <img src={FacebookIcon} alt="FacebookIcon" className="w-4 mr-2 cursor-pointer" />
+                <img src={XIcon} alt="XIcon" className="w-4 mr-2 cursor-pointer" />
+                <img src={LinkedInIcon} alt="LinkedInIcon" className="w-4 mr-2 cursor-pointer" />
             </div>
           </div>
         </div>
