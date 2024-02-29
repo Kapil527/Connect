@@ -5,13 +5,11 @@ import ThirdPart from "../Home/ThirdPart";
 export default function Home() {
   return (
     <>
-      <div className=" h-full">
-        <div className="container h-full">
-          <WelcomeHome />
-          <SecondPart />
-          <ThirdPart />
-        </div>
-      </div>
+    <div className="w-full">
+      <WelcomeHome />
+      <SecondPart />
+      <ThirdPart />
+    </div>
     </>
   );
 }

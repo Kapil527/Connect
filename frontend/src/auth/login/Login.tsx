@@ -44,7 +44,7 @@ export default function Login() {
 
   return (
     <>
-      <div className="container h-screen flex flex-wrap justify-evenly items-center w-screen">
+      <div className="container h-screen flex flex-wrap justify-evenly items-center w-full">
         <div className="right bg-white h-1/2 w-1/4 p-8 rounded-xl drop-shadow-2xl">
           <div className="header flex justify-center">
             <h1 className="text-center text-sky-800 text-2xl font-medium">

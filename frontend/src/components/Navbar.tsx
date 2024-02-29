@@ -14,7 +14,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <nav className="p-4 w-full sticky top-0 flex bg-white shadow-sm z-10">
+      <nav className="flex flex-wrap p-4 w-full sticky top-0 bg-white shadow-sm z-10">
         <div className="left w-1/2 flex flex-row items-center justify-evenly">
           <div className="icon w-1/5">
             <Link to="/">

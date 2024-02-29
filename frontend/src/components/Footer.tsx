@@ -9,10 +9,10 @@ import LinkedInIcon from "/linkedin-icon.svg"
 const Footer = () => {
   return (
     <>
-      <footer className=" h-fit flex items-center bg-gray-900 text-white p-12">
+      <footer className=" h-fit w-full flex items-center bg-gray-900 text-white p-6 md:p-12">
         <div className="container">
-          <div className="uppperSection grid grid-cols-4 mb-4 place-content-between">
-            <div className="aboutText col-span-2">
+          <div className="uppperSection md:grid md:grid-cols-3 lg:grid-cols-4 mb-4 place-content-between">
+            <div className="aboutText lg:col-span-2">
               <div className="logo flex items-center mb-8">
                 <img src={Logo} alt="Logo" className=" w-8 mr-4" />
                 <h2 className=" text-4xl font-semibold ">Connect</h2>
@@ -22,23 +22,23 @@ const Footer = () => {
                 solutions online.
               </p>
             </div>
-            <div className="quickLinks ms-20">
-              <h3 className=" text-2xl mb-8 font-semibold">Quick Links</h3>
+            <div className="quickLinks mt-4 md:ms-20">
+              <h3 className=" text-2xl mb-2 md:mb-8 font-semibold">Quick Links</h3>
               <Link to="/">
-                <p className="ms-4">Home</p>
+                <p className="md:ms-4">Home</p>
               </Link>
               <Link to="/">
-                <p className="ms-4">About Us</p>
+                <p className="md:ms-4">About Us</p>
               </Link>
               <Link to="/">
-                <p className="ms-4">Appointment</p>
+                <p className="md:ms-4">Appointment</p>
               </Link>
               <Link to="/">
-                <p className="ms-4">Blog</p>
+                <p className="md:ms-4">Blog</p>
               </Link>
             </div>
-            <div className="contactUs ms-20">
-                <h3 className=" text-2xl mb-8 font-semibold">Contact Us</h3>
+            <div className="contactUs mt-4 md:ms-20">
+                <h3 className=" text-2xl mb-2 md:mb-8 font-semibold">Contact Us</h3>
               <ul>
                 <li>Email: connectToThis@email.com</li>
                 <li>PhoneNumber: +91 123-456-7890</li>
@@ -47,7 +47,7 @@ const Footer = () => {
             </div>
           </div>
           <hr/>
-          <div className="lowerSection mt-4 flex justify-between">
+          <div className="lowerSection mt-4 md:flex justify-between">
             <div className="copyWrite">
            <p>&copy; 2024 Connect Telemed. All rights reserved.</p>
             </div>

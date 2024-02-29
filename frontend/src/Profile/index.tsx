@@ -5,7 +5,7 @@ import { ProfilePic } from "./ProfilePic";
 
 const ProfileDetails = () => {
   return (
-    <div className="content w-3/4 px-4 flex flex-col">
+    <div className="content md:w-3/4 px-2 sm:px-4 flex flex-col">
       <ProfilePic />
       <BasicInfo />
       <ChangePassword />

@@ -1,7 +1,7 @@
 const AppointmentCard = () => {
   return (
     <>
-      <div className="w-screen h-screen flex items-center">
+      <div className="w-full h-full flex items-center">
         <div className="container w-full">
           <div className="card flex flex-col items-center shadow p-4">
             <div className="heading">
