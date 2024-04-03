@@ -1,7 +1,7 @@
 export const BasicInfo = () => {
   return (
     <>
-      <div className="container bg-white rounded-xl shadow mb-8">
+      <div className="container bg-white rounded shadow my-8">
         <div className="basicInfo">
           <div className="heading">
             <h2 className="m-4 text-xl font-bold ml-8">Basic Info</h2>

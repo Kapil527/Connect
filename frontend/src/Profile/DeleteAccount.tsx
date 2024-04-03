@@ -1,7 +1,7 @@
 export const DeleteAccount = () => {
     return (
         <>
-        <div className="container bg-white shadow rounded-xl my-4">
+        <div className="container bg-white shadow rounded my-4">
             <div className="heading my-4 ml-8">
                 <h5 className="text-xl font-bold">Delete Account</h5>
             </div>

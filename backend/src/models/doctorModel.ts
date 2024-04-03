@@ -8,7 +8,6 @@ const doctorSchema = new Schema<DoctorSchemaType>({
     ref: "userId",
     require: true,
   },
-  appointments: { type: [mongoose.Schema.Types.ObjectId], ref: "Appointments" },
   education: { type: String, require: true },
   experience: { type: String },
   availableHours: {

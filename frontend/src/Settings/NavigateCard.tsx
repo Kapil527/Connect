@@ -1,59 +1,65 @@
-import { Link } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
-import UserIcon from "/user-icon.png";
-import BillingIcon from "/billing-icon.svg";
-import MessageIcon from "/messageIcon.png";
-import DashboardIcon from "/dashboardIcon.png";
+import { ProfilePic } from "./ProfilePic";
 
 const cardLinks = [
   {
     name: "Profile",
-    path: "/profile",
-    icon: UserIcon,
+    path: "/settings/profile",
   },
   {
     name: "Billing",
-    path: "/billings",
-    icon: BillingIcon,
+    path: "/settings/billings",
   },
   {
-    name: "Messages",
-    path: "/messages",
-    icon: MessageIcon,
+    name: "Appointments",
+    path: "/settings/appointments",
+  },
+  {
+    name: "Prescription",
+    path: "/settings/prescription",
+  },
+  { name: "Radiology", path: "/settings/radiology" },
+  {
+    name: "Test Reports",
+    path: "/settings/test-reports",
   },
   {
     name: "Dashboard",
-    path: "/dashboard",
-    icon: DashboardIcon,
+    path: "/settings/dashboard",
   },
 ];
 
 interface CardLinksType {
   name: string;
   path: string;
-  icon: string;
 }
 
-export const CardList = ({ name, path, icon }: CardLinksType) => {
+export const CardList = ({ name, path }: CardLinksType) => {
+  const location = useLocation();
   return (
-    <Link to={path} className={`profile ${divsStyle}`}>
-      <div className="icon">
-        <img src={icon} alt="user icon" className={`${iconStyle}`} />
-      </div>
+    <Link
+      to={path}
+      className={`profile ${divsStyle} ${
+        location.pathname === path ? "bg-gray-100 rounded" : ""
+      }`}
+    >
       <div className={`text ${textStyle}`}>
         <p>{name}</p>
       </div>
     </Link>
   );
 };
+console.log(location.pathname);
 
 export const NavigateCard = () => {
   return (
     <>
-      <div className="hidden md:inline-block containter h-1/2 my-8 mx-4 w-1/4">
-        <div className="card shadow-xl rounded-xl bg-white p-4">
-          {cardLinks.map(({ name, path, icon }) => (
-            <CardList name={name} path={path} icon={icon} />
+      <div className="hidden md:block h-full w-1/4">
+        <div className="sidebar bg-white p-4">
+          <ProfilePic />
+          {cardLinks.map(({ name, path }) => (
+            <CardList name={name} path={path} />
           ))}
         </div>
       </div>
@@ -61,7 +67,5 @@ export const NavigateCard = () => {
   );
 };
 
-const iconStyle = "w-[25px] h-[25px]";
-const divsStyle =
-  "p-4 flex items-center hover:bg-gray-200 cursor-pointer hover:rounded-xl";
+const divsStyle = `py-4 flex items-center hover:bg-gray-100 cursor-pointer hover:rounded-sm`;
 const textStyle = "mx-4";

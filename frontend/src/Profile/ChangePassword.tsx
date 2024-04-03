@@ -1,7 +1,7 @@
 export const ChangePassword = () => {
   return (
     <>
-      <div className="container w-full bg-white rounded-xl shadow my-4">
+      <div className="container w-full bg-white rounded shadow my-4">
         <div className="heading my-4 ml-4 md:ml-8">
           <h5 className="text-xl font-bold">Change Password</h5>
         </div>

@@ -36,12 +36,6 @@ const userSchema = new Schema(
       enum: ["doctor", "patient"],
       required: true,
     },
-    appointments: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Appointment",
-      },
-    ],
   },
   {
     timestamps: true,

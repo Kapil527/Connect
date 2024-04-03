@@ -1,17 +1,11 @@
 import mongoose from "mongoose";
 
-export interface AppointmentSchemaType {
-  userId: mongoose.Schema.Types.ObjectId;
-  doctorId: mongoose.Schema.Types.ObjectId;
-  paitentName: string;
-  age: string;
-  phoneNumber: string;
-  price: string;
-  disease: string;
+import { CommonType } from "./commonType";
+
+export interface AppointmentSchemaType extends CommonType {
+  paymentId: mongoose.Schema.Types.ObjectId;
   status: string;
-  date: Date;
   startTime: Date;
   endTime: Date;
-  reason: string;
   createdAt: Date;
 }
