@@ -17,9 +17,9 @@ export const authentication = () => {
   //router - api/v1/users/login
   router.post("/login", login);
   //route - api/v1/users/dynamicId
+  router.get("/user", fetchUser, getUser);
   router
     .route("/:id")
-    .get(fetchUser, getUser)
     .put(fetchUser, changePassword)
     .delete(fetchUser, deleteUser);
 

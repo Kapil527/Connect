@@ -50,7 +50,6 @@ export const CardList = ({ name, path }: CardLinksType) => {
     </Link>
   );
 };
-console.log(location.pathname);
 
 export const NavigateCard = () => {
   return (

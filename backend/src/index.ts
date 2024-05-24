@@ -33,7 +33,7 @@ const server = http.createServer(app);
 connect();
 
 server.listen(8080, () => {
-  console.log("Server running on http://localhost/8080");
+  console.log("Server running on http://localhost:8080");
 });
 
 //middleware to handle errors

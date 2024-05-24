@@ -6,15 +6,15 @@ import { Provider } from "react-redux";
 
 import App from "./App.tsx";
 import "./index.css";
-import store from "./store.ts";
+import { store } from "./redux/store.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Toaster position="bottom-center" />
-    <Provider store={store}>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Provider store={store}>
         <App />
-      </BrowserRouter>
-    </Provider>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );

@@ -150,15 +150,10 @@ export const login = asyncErrorHandler(
 );
 
 export const getUser = asyncErrorHandler(async (req, res, next) => {
-  const id = req.params.id;
-  const userId = req.body.user;
-
-  if (id !== userId) {
-    return next(new ErrorHandler(401, "User unauthorized"));
-  }
+  const id = req.body.user;
 
   const user = await User.findById(id)
-    .select(["-password", "-createdAt", "_v"])
+    .select(["-password", "-createdAt", "-__v"])
     .lean();
 
   return res.status(200).json({ success: true, user });
